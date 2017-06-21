@@ -12,10 +12,12 @@ node index.js
 
 ## Tests
 npm test
+
 npm jshint
 
 ## Create a contact
 POST: /v1/contact
+
 Payload:
 ```javascript
 {
