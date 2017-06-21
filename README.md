@@ -7,6 +7,7 @@ npm install
 
 ## Running
 node index.js
+
 ** Note everything is set to run on localhost:3000. If this was a full blow app this would all be configurable
 
 ## Tests
