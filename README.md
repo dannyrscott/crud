@@ -8,12 +8,12 @@ npm install
 ## Running
 node index.js
 
-** Note everything is set to run on localhost:3000. If this was a full blow app this would all be configurable
+** Note everything is set to run on localhost:3000. You can change host and port by setting environment variables SERVER_HOST and SERVER_PORT respectively
 
 ## Tests
 npm test
 
-npm jshint
+npm run jshint
 
 ## Create a contact
 POST: /v1/contact
