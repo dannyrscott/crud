@@ -11,8 +11,7 @@ node index.js
 
 ##Tests
 npm test
-make test-code-style
-make jshint
+npm jshint
 
 ##Create a contact
 POST: /v1/contact
