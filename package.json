@@ -1,0 +1,25 @@
+{
+  "name": "crud",
+  "version": "1.0.0",
+  "description": "Basic Crud operations demo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ebbersj/crud.git"
+  },
+  "author": "Jason Ebbers",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ebbersj/crud/issues"
+  },
+  "homepage": "https://github.com/ebbersj/crud#readme",
+  "dependencies": {
+    "boom": "^5.1.0",
+    "glue": "^4.1.0",
+    "hapi": "^16.4.3",
+    "sqlite3": "^3.1.8"
+  }
+}
