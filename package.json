@@ -21,10 +21,12 @@
   },
   "homepage": "https://github.com/ebbersj/crud#readme",
   "dependencies": {
+    "bluebird": "^3.5.0",
     "boom": "^5.1.0",
     "convict": "^3.0.0",
     "glue": "^4.1.0",
     "hapi": "^16.4.3",
+    "joi": "^10.6.0",
     "sqlite3": "^3.1.8"
   },
   "devDependencies": {
