@@ -1,19 +1,19 @@
 # Contact CRUD
-##Description
+## Description
 Create basic CRUD operations for a contact in Sqlite
 
-##Install
+## Install
 npm install
 
-##Running
+## Running
 node index.js
 ** Note everything is set to run on localhost:3000. If this was a full blow app this would all be configurable
 
-##Tests
+## Tests
 npm test
 npm jshint
 
-##Create a contact
+## Create a contact
 POST: /v1/contact
 Payload:
 ```javascript
@@ -41,15 +41,15 @@ Payload:
   }
 }
 ```
-###Response Success:
+### Response Success:
 HTTP statusCode: 201
 HTTP Headers: Location: <URI to Resource>
 Payload: none
 
-##Read an existing contact
+## Read an existing contact
 GET: /v1/contact/{contact id} //Contact Id is an Integer
 
-###Response Success:
+### Response Success:
 HTTP statusCode: 200
 HTTP headers: none
 Payload:
@@ -79,7 +79,7 @@ Payload:
 }
 ```
 
-###Response Contact Id not found
+### Response Contact Id not found
 HTTP Status Code: 404
 HTTP Headers: none
 Payload:
@@ -91,7 +91,7 @@ Payload:
 }
 ```
 
-##Update an Existing Contact
+## Update an Existing Contact
 PUT: /v1/contact/{contact id} //Contact Id is an Integer
 NOTE This is method will replace the entire contact entity
 Payload:
@@ -121,7 +121,7 @@ Payload:
 }
 ```
 
-###Response Success:
+### Response Success:
 HTTP Status Code: 200
 HTTP Headers: none
 Payload:
@@ -151,7 +151,7 @@ Payload:
 }
 ```
 
-###Response Contact Id not found
+### Response Contact Id not found
 HTTP Status Code: 404
 HTTP Headers: none
 Payload:
@@ -163,15 +163,15 @@ Payload:
 }
 ```
 
-##Delete a Contact
+## Delete a Contact
 DELETE: /v1/contact/{contact id} //Contact Id is an Integer
 
-###Response Success
+### Response Success
 HTTP Status Code: 204
 HTTP Headers: none
 Payload: none
 
-###Response Contact Id not found
+### Response Contact Id not found
 HTTP Status Code: 404
 HTTP Headers: none
 Payload:
