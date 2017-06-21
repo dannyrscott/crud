@@ -43,15 +43,21 @@ Payload:
 ```
 ### Response Success:
 HTTP statusCode: 201
+
 HTTP Headers: Location: <URI to Resource>
+
 Payload: none
+
 
 ## Read an existing contact
 GET: /v1/contact/{contact id} //Contact Id is an Integer
 
 ### Response Success:
+
 HTTP statusCode: 200
+
 HTTP headers: none
+
 Payload:
 ```javascript
 {
@@ -81,7 +87,9 @@ Payload:
 
 ### Response Contact Id not found
 HTTP Status Code: 404
+
 HTTP Headers: none
+
 Payload:
 ```javascript
 {
@@ -93,7 +101,9 @@ Payload:
 
 ## Update an Existing Contact
 PUT: /v1/contact/{contact id} //Contact Id is an Integer
+
 NOTE This is method will replace the entire contact entity
+
 Payload:
 ```javascript
 {
@@ -123,7 +133,9 @@ Payload:
 
 ### Response Success:
 HTTP Status Code: 200
+
 HTTP Headers: none
+
 Payload:
 ```javascript
 {
@@ -153,7 +165,9 @@ Payload:
 
 ### Response Contact Id not found
 HTTP Status Code: 404
+
 HTTP Headers: none
+
 Payload:
 ```javascript
 {
@@ -168,12 +182,17 @@ DELETE: /v1/contact/{contact id} //Contact Id is an Integer
 
 ### Response Success
 HTTP Status Code: 204
+
 HTTP Headers: none
+
 Payload: none
+
 
 ### Response Contact Id not found
 HTTP Status Code: 404
+
 HTTP Headers: none
+
 Payload:
 ```javascript
 {
