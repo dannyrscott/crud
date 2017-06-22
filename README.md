@@ -40,8 +40,8 @@ Payload:
     "state": String(2), //State is assumed to be a 2 Letter US / CA State Abbreviation. I.e. '33333' Or 'A12-B34' Or 'A12 B34'
     "country": String(2), //'US' || 'CA',
     "zip": String(7), //Valid 5 digit US or 7 character CA postal code
-    "latitude": Number, //Floating point number, up to 5 decimal places
-    "longitude": Number //Floating point number, up to 5 decimal places
+    "latitude": Number, //Floating point number, up to 6 decimal places
+    "longitude": Number //Floating point number, up to 6 decimal places
   }
 }
 ```
