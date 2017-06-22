@@ -221,7 +221,7 @@ describe('Contact DAO tests', () => {
                     should(result).eql(1);
                     should(dbStub.run.callCount).eql(1);
                     should(dbStub.run.args[0][0]).containEql('UPDATE').containEql('CONTACT').containEql('SET');
-                    should(dbStub.run.args[0][0]).containEql('date_modified = CURRENT_TIMESTMP');
+                    should(dbStub.run.args[0][0]).containEql('date_modified = CURRENT_TIMESTAMP');
                     should(dbStub.run.args[0][0]).containEql('deleted = 1');
                     should(dbStub.run.args[0][0]).containEql('WHERE').containEql('id = $id');
                     should(dbStub.run.args[0][1]).have.property('$id').eql(id);
