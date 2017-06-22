@@ -65,26 +65,27 @@ HTTP headers: none
 Payload:
 ```javascript
 {
-  "name": String(100),
+  "name": String(100), //Required
   "company": String(100),
+  "favorite": Boolean,
   "smallImageURL": String(100), //Must be a valid URL
   "largeImageURL": String(100), //Must be a valid URL
-  "email": String(100), //Must be a valid email address
+  "email": String(100), //Required. Must be a valid email address
   "website": String(100), //Must be a valid URL
-  "birthday": Number, //Must be a Integer > 0
+  "birthdate": Number, //Must be a Integer > 0
   "phone": {
-    "work": String(15),
-    "home": String(15),
-    "mobile": String(15)
+    "work": String(12), //Must be in the format xxx-xxx-xxxx
+    "home": String(12), //Must be in the format xxx-xxx-xxxx
+    "mobile": String(12) //Must be in the format xxx-xxx-xxxx
   },
   address: {
     "street": String(100),
     "city": String(100),
-    "state": String(2), //State is assumed to be a 2 Letter US / CA State Abbreviation
+    "state": String(2), //State is assumed to be a 2 Letter US / CA State Abbreviation. I.e. '33333' Or 'A12-B34' Or 'A12 B34'
     "country": String(2), //'US' || 'CA',
     "zip": String(7), //Valid 5 digit US or 7 character CA postal code
-    "latitude": Number, //Floating point number, up to 5 decimal places
-    "longitude": Number //Floating point number, up to 5 decimal places
+    "latitude": Number, //Floating point number, up to 6 decimal places
+    "longitude": Number //Floating point number, up to 6 decimal places
   }
 }
 ```
@@ -111,26 +112,27 @@ NOTE This is method will replace the entire contact entity
 Payload:
 ```javascript
 {
-  "name": String(100),
+  "name": String(100), //Required
   "company": String(100),
+  "favorite": Boolean,
   "smallImageURL": String(100), //Must be a valid URL
   "largeImageURL": String(100), //Must be a valid URL
-  "email": String(100), //Must be a valid email address
+  "email": String(100), //Required. Must be a valid email address
   "website": String(100), //Must be a valid URL
-  "birthday": Number, //Must be a Integer > 0
+  "birthdate": Number, //Must be a Integer > 0
   "phone": {
-    "work": String(15),
-    "home": String(15),
-    "mobile": String(15)
+    "work": String(12), //Must be in the format xxx-xxx-xxxx
+    "home": String(12), //Must be in the format xxx-xxx-xxxx
+    "mobile": String(12) //Must be in the format xxx-xxx-xxxx
   },
   address: {
     "street": String(100),
     "city": String(100),
-    "state": String(2), //State is assumed to be a 2 Letter US / CA State Abbreviation
+    "state": String(2), //State is assumed to be a 2 Letter US / CA State Abbreviation. I.e. '33333' Or 'A12-B34' Or 'A12 B34'
     "country": String(2), //'US' || 'CA',
     "zip": String(7), //Valid 5 digit US or 7 character CA postal code
-    "latitude": Number, //Floating point number, up to 5 decimal places
-    "longitude": Number //Floating point number, up to 5 decimal places
+    "latitude": Number, //Floating point number, up to 6 decimal places
+    "longitude": Number //Floating point number, up to 6 decimal places
   }
 }
 ```
@@ -143,26 +145,27 @@ HTTP Headers: none
 Payload:
 ```javascript
 {
-  "name": String(100),
+  "name": String(100), //Required
   "company": String(100),
+  "favorite": Boolean,
   "smallImageURL": String(100), //Must be a valid URL
   "largeImageURL": String(100), //Must be a valid URL
-  "email": String(100), //Must be a valid email address
+  "email": String(100), //Required. Must be a valid email address
   "website": String(100), //Must be a valid URL
-  "birthday": Number, //Must be a Integer > 0
+  "birthdate": Number, //Must be a Integer > 0
   "phone": {
-    "work": String(15),
-    "home": String(15),
-    "mobile": String(15)
+    "work": String(12), //Must be in the format xxx-xxx-xxxx
+    "home": String(12), //Must be in the format xxx-xxx-xxxx
+    "mobile": String(12) //Must be in the format xxx-xxx-xxxx
   },
   address: {
     "street": String(100),
     "city": String(100),
-    "state": String(2), //State is assumed to be a 2 Letter US / CA State Abbreviation
+    "state": String(2), //State is assumed to be a 2 Letter US / CA State Abbreviation. I.e. '33333' Or 'A12-B34' Or 'A12 B34'
     "country": String(2), //'US' || 'CA',
     "zip": String(7), //Valid 5 digit US or 7 character CA postal code
-    "latitude": Number, //Floating point number, up to 5 decimal places
-    "longitude": Number //Floating point number, up to 5 decimal places
+    "latitude": Number, //Floating point number, up to 6 decimal places
+    "longitude": Number //Floating point number, up to 6 decimal places
   }
 }
 ```
