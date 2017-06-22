@@ -41,9 +41,8 @@ describe('db plugin tests', () => {
             should(databaseStub.args[0][0]).containEql('db');
             should(databaseStub.args[0][0]).containEql('index.db');
 
-            should(dbStub.runAsync.callCount).eql(2);
+            should(dbStub.runAsync.callCount).eql(1);
             should(dbStub.runAsync.args[0][0]).containEql('CREATE TABLE IF NOT EXISTS\n  CONTACT');
-            should(dbStub.runAsync.args[1][0]).containEql('CREATE TABLE IF NOT EXISTS\n  PHONE');
 
             should(serverStub.expose.callCount).eql(1);
 
