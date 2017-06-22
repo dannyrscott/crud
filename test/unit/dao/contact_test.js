@@ -34,11 +34,12 @@ describe('Contact DAO tests', () => {
         params = {
             name: chance.first() + ' ' + chance.last(),
             company: chance.word(),
+            favorite: chance.pickone([0, 1]),
             small_image_url: chance.url(),
             large_image_url: chance.url(),
             email: chance.email(),
             website: chance.url(),
-            birthday: chance.timestamp(),
+            birthdate: chance.timestamp(),
             street_address: chance.address(),
             city: chance.city(),
             state: chance.state(),
