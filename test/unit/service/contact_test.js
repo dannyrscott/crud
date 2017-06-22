@@ -73,7 +73,8 @@ describe('Contact Service', () => {
             serviceDAO.create(params)
                 .then((resp) => {
                     should.exist(resp);
-                    should(resp).eql('/v1/contact/' + id);
+                    should(resp).have.property('uri').eql('/v1/contact/' + id);
+                    should(resp).have.property('id').eql(id);
                     should(createStub.callCount).eql(1);
                     should(createStub.args[0][0]).eql(params);
                 })
