@@ -56,7 +56,7 @@ describe('Contact Service', () => {
         done();
     });
 
-    describe('Create contact', () => {
+    describe('Create Contact', () => {
         let createStub;
 
         beforeEach((done) => {
@@ -76,6 +76,121 @@ describe('Contact Service', () => {
                     should(resp).eql('/v1/contact/' + id);
                     should(createStub.callCount).eql(1);
                     should(createStub.args[0][0]).eql(params);
+                })
+                .done(done, done);
+        });
+    });
+
+    describe('Read Contact', () => {
+        let readStub;
+
+        beforeEach((done) => {
+            readStub = sandbox.stub(DAO.prototype, 'read');
+
+            done();
+        });
+
+        it('shoud return the record as an array', (done) => {
+            let id = chance.natural();
+            readStub.returns(BPromise.resolve(params));
+
+            serviceDAO.read(id)
+                .then((resp) => {
+                    should.exist(resp);
+                    should(resp).be.an.Array();
+                    should(resp.length).eql(1);
+                    should(resp[0]).eql(params);
+
+                    should(readStub.callCount).eql(1);
+                    should(readStub.args[0][0]).eql(id);
+                })
+                .done(done, done);
+        });
+
+        it('should return an empty array on no record', (done) => {
+            let id = chance.natural();
+            readStub.returns(BPromise.resolve(undefined));
+
+            serviceDAO.read(id)
+                .then((resp) => {
+                    should.exist(resp);
+                    should(resp).be.an.Array();
+                    should(resp.length).eql(0);
+                })
+                .done(done, done);
+        });
+    });
+
+    describe('Update Contact', () => {
+        let updateStub;
+
+        beforeEach((done) => {
+            updateStub = sandbox.stub(DAO.prototype, 'update');
+
+            done();
+        });
+
+        it('should return true on a record found', (done) => {
+            let id = chance.natural();
+            updateStub.returns(BPromise.resolve(1));
+
+            serviceDAO.update(id, params)
+                .then((resp) => {
+                    should.exist(resp);
+                    should(resp).have.property('updated').eql(true);
+
+                    should(updateStub.callCount).eql(1);
+                    should(updateStub.args[0][0]).eql(id);
+                    should(updateStub.args[0][1]).eql(params);
+                })
+                .done(done, done);
+        });
+
+        it('should return false on no record found', (done) => {
+            let id = chance.natural();
+            updateStub.returns(BPromise.resolve(0));
+
+            serviceDAO.update(id, params)
+                .then((resp) => {
+                    should.exist(resp);
+                    should(resp).have.property('updated').eql(false);
+                })
+                .done(done, done);
+        });
+    });
+
+    describe('Delete Contact', () => {
+        let deleteStub;
+
+        beforeEach((done) => {
+            deleteStub = sandbox.stub(DAO.prototype, 'delete');
+
+            done();
+        });
+
+        it('should return true on a record found', (done) => {
+            let id = chance.natural();
+            deleteStub.returns(BPromise.resolve(1));
+
+            serviceDAO.delete(id)
+                .then((resp) => {
+                    should.exist(resp);
+                    should(resp).have.property('deleted').eql(true);
+
+                    should(deleteStub.callCount).eql(1);
+                    should(deleteStub.args[0][0]).eql(id);
+                })
+                .done(done, done);
+        });
+
+        it('should return false on no record found', (done) => {
+            let id = chance.natural();
+            deleteStub.returns(BPromise.resolve(0));
+
+            serviceDAO.delete(id)
+                .then((resp) => {
+                    should.exist(resp);
+                    should(resp).have.property('deleted').eql(false);
                 })
                 .done(done, done);
         });
